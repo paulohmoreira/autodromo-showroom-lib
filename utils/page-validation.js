@@ -17,6 +17,24 @@ class CurrentPage {
   }
 
   /**
+   * Compares the URL of the current page with a given string.
+   *  @param {String} str - The string to compare against the current URL.
+   *  @returns {Boolean} `true` if the current URL matches the given string, otherwise `false`.
+   */
+  compareUrl(str) {
+    return str === this.pageUrl;
+  }
+
+  /**
+   * Checks if the current URL contains a given string.
+   * @param {String} str - The string to check for.
+   * @returns {Boolean} `true` if the current URL contains the given string, otherwise `false`.
+   */
+  containsUrl(str) {
+    return this.pageUrl.includes(str);
+  }
+
+  /**
    * Returns the pathname of the current page.
    * @returns {String} The pathname of the current page.
    */
