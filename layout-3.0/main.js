@@ -18,9 +18,9 @@ class DirectSalesBanner {
   }
 
   /**
-   * Remove the banner background-image
+   * Hide the banner background-image
    */
-  remove() {
+  hide() {
     this.banner.style.backgroundImage = 'none';
   }
 }
