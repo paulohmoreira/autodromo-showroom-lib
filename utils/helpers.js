@@ -60,3 +60,25 @@ class CurrentPage {
     return this.pagePathname.includes(str);
   }
 }
+
+class StyleSheet {
+  /**
+   * Adds the specified CSS styles to the web page.
+   * @param {String} styles - The CSS styles to be added.
+   * @returns {void}
+   */
+
+  add(styles) {
+    const css = styles,
+      head = document.head || document.getElementsByTagName('head')[0],
+      style = document.createElement('style');
+    head.appendChild(style);
+    style.setAttribute('type', 'text/css');
+    if (style.styleSheet) {
+      // This is required for IE8 and below.
+      style.styleSheet.cssText = css;
+    } else {
+      style.appendChild(document.createTextNode(css));
+    }
+  }
+}
